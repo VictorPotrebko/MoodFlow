@@ -1,0 +1,9 @@
+---
+description: API conventions for backend controllers
+globs: ["backend/Controllers/*.cs"]
+alwaysApply: false
+---
+
+- Use async Task<IActionResult> return types.
+- Validate input and return BadRequest on nulls.
+- Avoid exposing stack traces; use ProblemDetails.
