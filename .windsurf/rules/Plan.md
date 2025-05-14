@@ -89,7 +89,7 @@ GetMoodStatistics()
  Create test for MoodService.GetMoodEntries()
  Create test for MoodService.GetMoodStatistics()
  Create test for MoodsController endpoints
- Mock in-memory store for testing
+ use Mock library 
 
 FRONTEND IMPLEMENTATION (React + Vite + Tailwind)
 1. Setup Project Structure

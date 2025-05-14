@@ -482,24 +482,25 @@
     ]
   },
   "packageFolders": {
-    "/Users/danielbrezoi/.nuget/packages/": {}
+    "/Users/victor.kurilo/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/danielbrezoi/Development/hackathon-starter/backend/backend.csproj",
+      "projectUniqueName": "/Users/victor.kurilo/Documents/Mews/Projects/hackathon-starter/backend/backend.csproj",
       "projectName": "backend",
-      "projectPath": "/Users/danielbrezoi/Development/hackathon-starter/backend/backend.csproj",
-      "packagesPath": "/Users/danielbrezoi/.nuget/packages/",
-      "outputPath": "/Users/danielbrezoi/Development/hackathon-starter/backend/obj/",
+      "projectPath": "/Users/victor.kurilo/Documents/Mews/Projects/hackathon-starter/backend/backend.csproj",
+      "packagesPath": "/Users/victor.kurilo/.nuget/packages/",
+      "outputPath": "/Users/victor.kurilo/Documents/Mews/Projects/hackathon-starter/backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/danielbrezoi/.nuget/NuGet/NuGet.Config"
+        "/Users/victor.kurilo/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -551,7 +552,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.409/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
