@@ -19,7 +19,10 @@ export default function MoodTracker() {
       setError('Name is required.');
       return;
     }
-    if (!mood) {
+
+    console.log('MOOD', mood);
+
+    if (mood < 0 || mood > 4) {
       setError('Please select a mood.');
       return;
     }

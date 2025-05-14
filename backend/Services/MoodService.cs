@@ -69,8 +69,8 @@ namespace backend.Services
                 int seg = moods.Count / 5;
                 double avgStart = moods.Take(seg).Average(e => (int)e.MoodType);
                 double avgEnd = moods.Skip(moods.Count - seg).Average(e => (int)e.MoodType);
-                if (avgEnd < avgStart) trend = "Improving";
-                else if (avgEnd > avgStart) trend = "Declining";
+                if (avgEnd > avgStart) trend = "Improving";
+                else if (avgEnd < avgStart) trend = "Declining";
             }
             
             return new MoodStatisticsDto

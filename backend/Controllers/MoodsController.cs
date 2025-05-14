@@ -39,6 +39,9 @@ namespace backend.Controllers
                 return BadRequest("Name is required.");
             if (dto.Note != null && dto.Note.Length > 280)
                 return BadRequest("Note must be 280 characters or less.");
+            // Explicitly check for null, not falsy, to allow MoodType 0 (Happy)
+            if (dto.MoodType == null)
+                return BadRequest("MoodType is required.");
             _moodService.AddMoodEntry(dto);
             return Ok(dto);
         }

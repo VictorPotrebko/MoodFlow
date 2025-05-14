@@ -21,12 +21,17 @@ export default function MoodSelector({ selected, onSelect }: MoodSelectorProps) 
         <button
           key={mood.type}
           type="button"
-          className={`flex flex-col items-center px-4 py-2 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all
-            ${selected === mood.type ? 'border-blue-500 ring-2 ring-blue-300' : 'border-transparent'} ${mood.color} hover:scale-105`}
+          className={
+            `flex flex-col items-center gap-1 px-4 py-2 rounded-lg border-2 focus:outline-none transition-all ` +
+            (selected === mood.type
+              ? 'border-2 border-gray-500 bg-gray-300 text-gray-800 shadow-lg ring-2 ring-gray-400 scale-105'
+              : 'border border-gray-200 bg-white text-gray-600 hover:bg-gray-50 opacity-60 hover:opacity-100')
+          }
           onClick={() => onSelect(mood.type)}
-          aria-label={mood.label}
+          aria-pressed={selected === mood.type ? true : false}
+          tabIndex={0}
         >
-          <span className="text-3xl mb-1">{mood.icon}</span>
+          <span className="text-2xl">{mood.icon}</span>
           <span className="text-xs font-medium">{mood.label}</span>
         </button>
       ))}
