@@ -1,9 +1,0 @@
----
-description: UI best practices
-globs: ["frontend/src/**/*.jsx"]
-alwaysApply: false
----
-
-- Use functional components and React hooks only.
-- Apply Tailwind classes consistently.
-- Avoid inline styles; use utility classes.
