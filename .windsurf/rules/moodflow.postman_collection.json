@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "28740f80-9afe-4440-9b95-b6db81d35190",
+		"name": "moodflow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37051468",
+		"_collection_link": "https://financial-services.postman.co/workspace/My-Workspace~1ace83c6-4131-47bc-8515-2f8de8182af3/collection/37051468-28740f80-9afe-4440-9b95-b6db81d35190?action=share&source=collection_link&creator=37051468"
+	},
+	"item": [
+		{
+			"name": "All Moods",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Date Range",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Mood Statistics",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Mood Statistics with Date Range",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Mood",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John\",\n    \"moodType\": 0,\n    \"note\": \"Feeling awesome today!\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/moods",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"moods"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -94,7 +94,9 @@ GetMoodStatistics()
 FRONTEND IMPLEMENTATION (React + Vite + Tailwind)
 1. Setup Project Structure
 
- Create components folder structure:
+Remove boiler plate code.
+
+Create components folder structure:
 
 src/components/MoodTracker
 src/components/MoodHistory

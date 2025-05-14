@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import MoodTracker from './components/MoodTracker';
+import MoodHistory from './components/MoodHistory';
+import MoodInsights from './components/MoodInsights';
+import './App.css';
+
+const tabs = [
+  { key: 'tracker', label: 'Record Mood' },
+  { key: 'history', label: 'View History' },
+  { key: 'insights', label: 'View Insights' },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activeTab, setActiveTab] = useState('tracker');
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
+      <header className="py-6 text-center text-2xl font-bold tracking-tight">
+        MoodFlow
+      </header>
+      <nav className="flex justify-center gap-4 mb-4">
+        {tabs.map(tab => (
+          <button
+            key={tab.key}
+            className={`px-4 py-2 rounded font-medium focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all
+              ${activeTab === tab.key ? 'bg-blue-500 text-white shadow' : 'bg-white text-blue-500 border border-blue-200 hover:bg-blue-50'}`}
+            onClick={() => setActiveTab(tab.key)}
+            aria-current={activeTab === tab.key ? 'page' : undefined}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </nav>
+      <main className="flex-1 flex flex-col items-center justify-start p-4">
+        {activeTab === 'tracker' && <MoodTracker />}
+        {activeTab === 'history' && <MoodHistory />}
+        {activeTab === 'insights' && <MoodInsights />}
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
