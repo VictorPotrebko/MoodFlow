@@ -1,0 +1,22 @@
+# .NET test/build artifacts
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider/VSCode/JetBrains
+.idea/
+.vscode/
+*.sln.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test results
+TestResults/
